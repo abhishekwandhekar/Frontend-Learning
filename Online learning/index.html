@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Online Learning Platform</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <h2>Featured Courses</h2>
+            <div id="course-list" class="course-list"></div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Online Learning Platform. All rights reserved.</p>
+        </div>
+        <div id="course-detail-slide" class="slide">
+            <div class="slide-content">
+                <!-- Course details and application process -->
+                <h2>Course Details</h2>
+                <p>Course Name: <span id="course-name"></span></p>
+                <p>Instructor: <span id="course-instructor"></span></p>
+                <p>Price: <span id="course-price"></span></p>
+                <p>Application Process:</p>
+                <ol>
+                    <li>Step 1: Fill out the application form.</li>
+                    <li>Step 2: Pay the course fee.</li>
+                    <li>Step 3: Start learning!</li>
+                </ol>
+                <!-- Close button -->
+                <button id="close-slide-btn">Close</button>
+            </div>
+        </div>
+        
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

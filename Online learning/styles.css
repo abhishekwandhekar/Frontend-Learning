@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* Background color for the body */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+    min-height: 100vh; /* Ensure the body fills the viewport */
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #FFB300; /* Yellow color for the header */
+    color: #ffffff;
+    padding: 20px 0;
+    display: flex; /* Use flexbox for header layout */
+    justify-content: space-between; /* Align items with space between */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    align-items: start;
+    padding: 10px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    align-items: end;
+    align-content: end;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+    background-color: rgb(202, 93, 31);
+    padding: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 40px 0;
+    flex: 1; /* Allow main content to grow to fill available space */
+    background-image: url('background-image.jpg'); /* Replace 'background-image.jpg' with the path to your image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+}
+
+
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.course-card {
+    background-color: rgba(0, 0, 0, 0.808); /* Transparent background color for the course cards */
+    padding: 20px;
+    border: 2px solid #FF6F00; /* Orange border color for the course cards */
+    border-radius: 5px;
+    color: #ffffff; /* White text color */
+    transition: box-shadow 0.3s ease; /* Smooth transition for box shadow */
+    position: relative; /* Enable absolute positioning for child elements */
+    min-height: 200px; /* Set a minimum height for the course cards */
+}
+
+.course-card h3,
+.course-card p {
+    margin: 0; /* Remove default margins */
+}
+.course-card:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7); /* Glowing effect on hover */
+}
+
+.price-button {
+    position: absolute; /* Position the price button absolutely */
+    bottom: 20px; /* Distance from the bottom of the card */
+    right: 20px; /* Distance from the right of the card */
+    background-color: #FF6F00; /* Orange background color for the button */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.price-button:hover {
+    background-color: #FFA000; /* Darker orange on hover */
+}
+/* Keyframes for glowing effect */
+@keyframes glowing {
+    0% {
+        box-shadow: 0 0 10px #2196F3, 0 0 20px #2196F3, 0 0 30px #2196F3, 0 0 40px #2196F3;
+    }
+    50% {
+        box-shadow: 0 0 20px #2196F3, 0 0 30px #2196F3, 0 0 40px #2196F3, 0 0 50px #2196F3;
+    }
+    100% {
+        box-shadow: 0 0 10px #2196F3, 0 0 20px #2196F3, 0 0 30px #2196F3, 0 0 40px #2196F3;
+    }
+}
+
+.slide {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    color: #fff;
+    padding: 40px; /* Increased padding */
+    border-radius: 20px; /* Increased border radius */
+    z-index: 9999; /* Ensure the slide is above other content */
+    animation: glowing 2s infinite; /* Apply glowing animation */
+}
+
+.slide-content {
+    max-width: 800px; /* Increased max-width */
+    margin: 0 auto;
+}
+
+.slide button {
+    background-color: #2196F3; /* Blue background color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slide button:hover {
+    background-color: #1976D2; /* Darker shade of blue on hover */
+    animation: none; /* Stop glowing animation on hover */
+}
+
+
+
+footer {
+    background-color: #D32F2F; /* Red color for the footer */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
+}
